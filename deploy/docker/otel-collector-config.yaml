@@ -96,6 +96,6 @@ service:
       processors: [batch]
       exporters: [clickhousemetricswrite/prometheus, signozclickhousemetrics]
     logs:
-      receivers: [otlp]
+      receivers: [otlp, syslog]
       processors: [batch]
       exporters: [clickhouselogsexporter]
